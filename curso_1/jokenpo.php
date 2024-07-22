@@ -7,11 +7,12 @@ echo "
 2_tesoura
 
 ";
+
 echo 'Faça sua escolha: ';
 $escolha1 = trim(fgets(STDIN));
 $esc = (int)$escolha1;
 
-$eclpc = 1;
+$eclpc = mt_rand(0, 2);
 $escolha = $opcoes[$esc];
 
 if ($escolha !== 1 and $escolha !== 2 and $escolha !== 0 ){
@@ -25,5 +26,7 @@ if ($escolha !== 1 and $escolha !== 2 and $escolha !== 0 ){
         echo 'Você Perdeu';
     }
 }
+
+echo ', a escolha do computador foi: ', $eclpc;
 ?>
 
