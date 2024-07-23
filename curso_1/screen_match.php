@@ -28,7 +28,7 @@
 
     echo "\n";
 
-    echo "Esse é um filme de " . $genero
+    echo "Esse é um filme de " . $genero;
 
 
 ?>
