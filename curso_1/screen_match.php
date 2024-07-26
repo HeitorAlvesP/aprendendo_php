@@ -4,11 +4,8 @@
     $ano_de_lançamento = $argv[1] ?? 2024;
     $inclui_no_plano = true;
 
-    $lista_de_notas = [2, 6, 7, 8, 3];
-    $soma_de_notas = array_sum($lista_de_notas);
-    $num = count($lista_de_notas);
-
-    $nota_de_filme = $soma_de_notas / $num;
+    $soma_de_notas = 0;
+    $nota_de_filme = $soma_de_notas / ($argc - 1);
 
     echo $nota_de_filme . ", é a nota do filme \n";
 
@@ -18,17 +15,19 @@
          echo "Não é tão novo assim";
     };
 
-    $genero = match ($nome_do_filme) {
+    /*$genero = match ($nome_do_filme) {
         "" => "Ação" ,
         "" => "comedia",
         "" => "Ciencia" ,
         "" => "Romance",
-        default => 'Nome desconhecido'
-    };
+        default => ' desconhecido'
+    };*/
 
     echo "\n";
 
-    echo "Esse é um filme de " . $genero;
+    echo "Esse é um filme de " . $genero ,"\n"; 
+
+    echo $argc;
 
 
 ?>
