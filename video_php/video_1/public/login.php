@@ -14,7 +14,7 @@
     <form action="index.php?rota=login" method="post"></form>
     <h3>Login</h3>
     <div>
-        <label for="usuario">Usuário</label>
+        <label for="usuario">Nome</label>
         <input type="text" name="usuario" id="usuario"  >
     </div>
     <div>
