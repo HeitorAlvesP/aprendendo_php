@@ -3,6 +3,7 @@
     echo "Bem vindo ao Screen Match \n";
 
     $nomeFilme = "Top Gun-Mavercik";
+
     $anoDeLancamento = 2022;
     $planoPrime = true;
     $incluido = $planoPrime || $anoDeLancamento < 2020;
@@ -11,7 +12,22 @@
     $mediaNotas = array_sum($notasFilmes) / count($notasFilmes);
     echo "A nota é: $mediaNotas\n";
 
-    echo "Nome do Filme: $nomeFilme";
+    echo "Nome do Filme: $nomeFilme \n";
+
+    if($anoDeLancamento <= 2022){
+        echo "Filme novo \n";
+    }else{
+        echo "Ne novo não \n";
+    };
+
+    // $genero = match($nomeFilme){
+    //     ""  => "Ação",
+    //     "" => "Comedia",
+    //     "" => "Carro",
+    //     "" => "Sla",
+    // };
+    // echo "O genero é: ", $genero;
+
 
     
 ?>
