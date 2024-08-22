@@ -4,8 +4,8 @@
 
     $nomeFilme = "Top Gun-Mavercik";
     $anoDeLancamento = 2022;
-    $incluido = $planoPrime || $anoDeLancamento < 2020;
     $planoPrime = true;
+    $incluido = $planoPrime || $anoDeLancamento < 2020;
 
     $notasFilmes = [3, 5, 7, 8];
     $mediaNotas = array_sum($notasFilmes) / count($notasFilmes);
