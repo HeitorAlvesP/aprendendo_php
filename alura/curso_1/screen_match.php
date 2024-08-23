@@ -42,5 +42,7 @@
     mensagem_genero();
     calcular_media_nota();
 
+    //var_dump($filme);
+
 
 ?>
