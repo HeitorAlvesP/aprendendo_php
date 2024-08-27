@@ -17,7 +17,8 @@
     mensagem_genero();
     calcular_media_nota();
 
-    //var_dump($filme);
+    $filemComoJson =  json_encode($filme);
+    file_put_contents(__DIR__ . ('/filme.json'), $filemComoJson);
 
 
 ?>
