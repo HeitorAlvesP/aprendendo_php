@@ -1,29 +1,33 @@
 <?php 
 
-    function mensagem_genero(){
-        global $filme;       
-        if($filme["genero"] == "" ){
-            echo $filme["genero"] = "Genero do filme não informado \n" ;
+    
+    function define_genero($filme){
+        $genero = ["Ação", "Comedia", "Corrida", "Romance", "Terror"];    
+        return $genero[$filme];
+    }
+
+    function mensagem_ano($filme){
+        if($filme["ano"] >= 2024){
+            echo "O filme ", $filme["nome"], " é uma estreia \n";
+        }elseif($filme["ano"] < 2024 && $filme["ano"] >= 2022){
+            echo "O filme ", $filme["nome"], " é novo, mas não uma estreia \n";
         }else{
-            echo "Genero: " ,$filme["genero"], "\n";
+            echo "O filme ", $filme["nome"], " é um classico \n";
         };
     }
 
-    function mensagem_ano(){
-        global $filme;     
-        if($filme["anoDeLancamento"] >= 2024){
-            echo "O filme ", $filme["nomeFilme"], " é uma estreia \n";
-        }elseif($filme["anoDeLancamento"] < 2024 && $filme["anoDeLancamento"] >= 2022){
-            echo "O filme ", $filme["nomeFilme"], " é novo, mas não uma estreia \n";
-        }else{
-            echo "O filme ", $filme["nomeFilme"], " é um classico \n";
-        };
-    }
-
-    function calcular_media_nota(){
-        global $filme;
-        $mediaNotas = array_sum($filme["notasFilmes"]) / count($filme["notasFilmes"]);
-        echo "Avaliação: $mediaNotas\n";
+    function calcular_media_nota($filme){
+        $mediaNotas = array_sum($filme) / count($filme);
+        return $mediaNotas;
     };
+
+    function criafilme(string $nomeFilme, int $anoDeLancamento, int $genero, array $notasFilme): array{
+        return[
+            'nome' =>  $nomeFilme,
+            'ano' => $anoDeLancamento,
+            'genero' => define_genero($genero),
+            'notasFilme' => calcular_media_nota($notasFilme)
+        ];
+    }
 
 ?>

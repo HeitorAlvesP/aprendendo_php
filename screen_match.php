@@ -1,29 +1,33 @@
 <?php
 
     echo "Bem vindo ao Screen Match \n";
-
-    $genero = ["Ação", "Comedia", "Corrida", "Romance", "Terror"];
-
     require __DIR__ . "/funcoes.php";
 
-    $filme = [
-        "nomeFilme" => "Ex Nome",
-        "anoDeLancamento" => 2024,
-        "genero" => $genero[2],
-        "notasFilmes" => [6, 5, 7, 8]
-    ];
+    $cd_genero = [0 => "Ação", 1 => "Comedia"   , 2 => "Corrida"  ,3 =>  "Romance"  ,4 => "Terror"];
 
-    mensagem_ano();
-    mensagem_genero();
-    calcular_media_nota();
+    $filme = criafilme(
+        "HULL",
+        2021,
+        1,
+        [5, 5, 5]
+    );
 
-    $filmeComoJson =  json_encode($filme);
-    file_put_contents(__DIR__ . ('/filme.json'), $filmeComoJson);
+    $filme2 = criafilme(
+        "Thor: Rag",
+        1994,
+        0,
+        [9,8,9]
+    );
+
+    // $filmeComoJson =  json_encode($filme);
+    // file_put_contents(__DIR__ . ('/filme.json'), $filmeComoJson);
     
-    $filmeComoAss = __DIR__ . ('/filme.json');
-    $filmeArray = file_get_contents($filmeComoAss);
+    // // $filmeComoAss = __DIR__ . ('/filme.json');
+    // // $filmeArray = file_get_contents($filmeComoAss);
 
-    echo $filmeArray;
+    // // echo $filmeArray;
 
+    var_dump($filme);
+    var_dump($filme2);
 
 ?>
