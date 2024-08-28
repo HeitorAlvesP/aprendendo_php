@@ -21,12 +21,9 @@
 
     // $filmeComoJson =  json_encode($filme);
     // file_put_contents(__DIR__ . ('/filme.json'), $filmeComoJson);
+    // $filmeComoJson =  json_encode($filme2);
+    // file_put_contents(__DIR__ . ('/filme.json'), $filmeComoJson);
     
-    // // $filmeComoAss = __DIR__ . ('/filme.json');
-    // // $filmeArray = file_get_contents($filmeComoAss);
-
-    // // echo $filmeArray;
-
     var_dump($filme);
     var_dump($filme2);
 

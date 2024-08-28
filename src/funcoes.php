@@ -1,6 +1,7 @@
 <?php 
 
-    
+    include __DIR__ . '/modelo/Filme.php';    
+
     function define_genero($filme){
         $genero = ["Ação", "Comedia", "Corrida", "Romance", "Terror"];    
         return $genero[$filme];
@@ -22,13 +23,18 @@
         return $mediaNotas;
     };
 
-    function criafilme(string $nomeFilme, int $anoDeLancamento, int $genero, array $notasFilme): array{
-        return[
-            'nome' =>  $nomeFilme,
-            'ano' => $anoDeLancamento,
-            'genero' => define_genero($genero),
-            'notasFilme' => calcular_media_nota($notasFilme)
-        ];
+    function criafilme(string $nomeFilme, int $anoDeLancamento, int $genero, array $notasFilme): Filme {
+
+        $Filme = new Filme();
+
+
+
+        // return[
+        //     'nome' =>  $nomeFilme,
+        //     'ano' => $anoDeLancamento,
+        //     'genero' => define_genero($genero),
+        //     'notasFilme' => calcular_media_nota($notasFilme)
+        // ];
     }
 
 ?>
