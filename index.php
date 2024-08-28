@@ -1,7 +1,7 @@
 <?php
 
     echo "Bem vindo ao Screen Match \n";
-    require __DIR__ . "/funcoes.php";
+    include __DIR__ . "/src/funcoes.php";
 
     $cd_genero = [0 => "Ação", 1 => "Comedia"   , 2 => "Corrida"  ,3 =>  "Romance"  ,4 => "Terror"];
 
