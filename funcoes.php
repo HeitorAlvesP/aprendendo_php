@@ -17,7 +17,8 @@
     }
 
     function calcular_media_nota($filme){
-        $mediaNotas = array_sum($filme) / count($filme);
+        $mediaNotas1 = array_sum($filme) / count($filme);
+        $mediaNotas = round($mediaNotas1, 1);
         return $mediaNotas;
     };
 
