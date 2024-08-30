@@ -1,10 +1,11 @@
 <?php 
 
-    require __DIR__ . '/modelo/Filme.php';    
+    require __DIR__ . '/modelo/Filme.php';  
+    require __DIR__ . '/modelo/Serie.php'; 
 
-    function define_genero($filme){
+    function define_genero($generos){
         $genero = ["Ação", "Comedia", "Corrida", "Romance", "Terror"];    
-        return $genero[$filme];
+        return $genero[$generos];
     }
 
     function mensagem_ano($filme){
@@ -17,21 +18,11 @@
         };
     }
 
-    function calcular_media_nota($filme){
-        $mediaNotas1 = array_sum($filme) / count($filme);
+    function calcular_media_nota($Media){
+        $mediaNotas1 = array_sum($Media) / count($Media);
         $mediaNotas = round($mediaNotas1, 1);
         return $mediaNotas;
     };
 
-    function criafilme(string $nomeFilme, int $anoDeLancamento, int $genero, array $notasFilme): Filme {
-
-        $Filme = new Filme();
-        $Filme->nomeFilme = $nomeFilme;
-        $Filme->anoLancamento = $anoDeLancamento;
-        $Filme->genero = $genero;
-        $Filme->notasFilme = $notasFilme;
-        return $Filme;
-
-    }
 
 ?>
